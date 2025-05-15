@@ -8,12 +8,10 @@ export const DataContextProvider = ({children}) => {
     const [data, dataDispatch] = useReducer(dataReducer, initialData)
 
     const handleQuerySubmit = async (query) => {
-        console.log('clicked')
         dataDispatch({type : "SET_LOADING", payload : true});
         dataDispatch({type : "SET_ERROR", payload : ""}) 
         try {
         const res = await axios.post("http://127.0.0.1:8000/api/analyze/", { query });
-        console.log("res ", res)
         if(res.data.error){
             dataDispatch({type : "SET_ERROR", payload : res.data.error}) 
         }else{
