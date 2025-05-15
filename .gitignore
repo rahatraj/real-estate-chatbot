@@ -1,0 +1,30 @@
+# =========================
+# Python/Django
+# =========================
+*.pyc
+__pycache__/
+db.sqlite3
+*.sqlite3
+.env
+.env.*
+*.log
+
+venv/
+
+# Django migration files (optional to ignore)
+# Uncomment if you want to exclude migration history
+# chatbot/migrations/
+# !chatbot/migrations/__init__.py
+
+# =========================
+# VSCode & OS
+# =========================
+.vscode/
+.DS_Store
+Thumbs.db
+
+# =========================
+# Others
+# =========================
+*.bak
+*.tmp
